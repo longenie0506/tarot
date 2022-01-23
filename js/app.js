@@ -76,7 +76,7 @@ playAgain.onclick = function(e) {
     getCards(cardNumber);
 
     modalContainer.style.opacity = 0;
-    const backgroundCard = 'url(https://raw.githubusercontent.com/gabrielaalvescosta/ChooseACardTarot/main/assets/card.png)';
+    const backgroundCard = 'url(https://raw.githubusercontent.com/longenie0506/tarot/main/assets/card.png?token=GHSAT0AAAAAABQIA562XRIWAXGMVZAQ6PGQYPMYOHQ)';
     let cardClose = document.getElementsByClassName('main__tarot-card');
 
     for (let j = 0; j < cardClose.length; j++) {
