@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Fortuneteller</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-yn">
+                <h1>TAROT READER</h1>
+                <!-- <h2 class="header__subtitle">- Tarot -</h2> -->
+                <p class="header__paragraph">Nghĩ về điều bạn cần giải mã, càng thành tâm thì lá bài của bạn càng chính xác</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="main__container-cards">
+                <!-- <div id="card" class="main__tarot-card"></div> -->
+                <div id="card" class="main__tarot-card"></div>
+                <!-- <div id="card" class="main__tarot-card"></div> -->
+            </div>
+            <div id="modalContainer" class="modal-background">
+                <div id="modal" class="main__tarot-modal">
+                    <div class="main__tarot-modal__container">
+                        <div class="main__tarot-modal__tarot-card">
+                            <div class="main__tarot-modal__card-photo">
+                                <img id="photo" alt="" /></div>
+                            <div id="card-name" class="main__tarot-modal__card-name"></div>
+                        </div>
+
+                        <div class="main__tarot-modal__tarot-answer">
+                            <div class="main__tarot-modal__tarot-modal-yn-close">
+
+                                <h2><b id="yes-or-no"></b></h2>
+                                <div id="closeButton" class="main__tarot-modal__close">x</div>
+                            </div>
+
+                            <div id="explanation" class="main__tarot-modal__explanation">
+                            </div>
+                            <div class="main__tarot-modal__buttons">
+                                <button id="again">Play Again</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
