@@ -1,5 +1,5 @@
 // modal
-const url = 'https://tarot-yn.herokuapp.com/cards';
+const url = 'https://raw.githubusercontent.com/longenie0506/tarot/main/js/cards.json';
 const modalContainer = document.getElementById('modalContainer');
 let card = document.getElementsByClassName('main__tarot-card');
 const closeButton = document.getElementById('closeButton');
@@ -8,9 +8,7 @@ const playAgain = document.getElementById('again');
 // random number card
 
 const min = Math.ceil(0);
-const max = Math.floor(21);
-let random = Math.floor(Math.random() * (max - min)) + min;
-let cardNumber = random;
+const max = Math.floor(77);
 
 
 async function getCards(cardNumber) {
@@ -35,6 +33,8 @@ for (let i = 0; i < card.length; i++) {
     card[i].onclick = async function() {
 
         this.style.animation = '';
+        let random = Math.floor(Math.random() * (max - min)) + min;
+        let cardNumber = random;
         const dados = await getCards(cardNumber);
 
 
@@ -55,10 +55,6 @@ for (let i = 0; i < card.length; i++) {
 // Close modalContainer when click in "x"
 closeButton.onclick = function() {
 
-    let newRandom = Math.floor(Math.random() * (max - min)) + min;
-    cardNumber = newRandom;
-    getCards(cardNumber);
-
     modalContainer.style.opacity = 0;
     setTimeout(() => {
         modalContainer.style.display = 'none';
@@ -71,10 +67,6 @@ closeButton.onclick = function() {
 playAgain.onclick = function(e) {
     e.stopPropagation();
 
-    let newRandom = Math.floor(Math.random() * (max - min)) + min;
-    cardNumber = newRandom;
-    getCards(cardNumber);
-
     modalContainer.style.opacity = 0;
     const backgroundCard = 'url(https://raw.githubusercontent.com/longenie0506/tarot/main/assets/card.png?token=GHSAT0AAAAAABQIA562XRIWAXGMVZAQ6PGQYPMYOHQ)';
     let cardClose = document.getElementsByClassName('main__tarot-card');
@@ -85,6 +77,6 @@ playAgain.onclick = function(e) {
         cardClose[j].style.backgroundImage = backgroundCard;
         cardClose[j].style.animation = 'flip 0.2s linear';
     }
-
     setTimeout(() => { modalContainer.style.display = 'none' }, 250)
+
 }

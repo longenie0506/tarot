@@ -1,4 +1,4 @@
-# Yes or No Tarot 🔮
+# Tarot reader 🔮
 
 <p align="center">
   <img src="./previa-web.gif" alt="Versão Web"/>
